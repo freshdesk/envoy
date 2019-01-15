@@ -63,6 +63,8 @@ Http::FilterHeadersStatus Filter::decodeHeaders(Http::HeaderMap& headers, bool) 
     return Http::FilterHeadersStatus::Continue;
   }
 
+  request_headers_ = &headers;
+
   initiateCall(headers);
   return (state_ == State::Calling || state_ == State::Responded)
              ? Http::FilterHeadersStatus::StopIteration
@@ -159,6 +161,10 @@ void Filter::complete(RateLimit::LimitStatus status, Http::HeaderMapPtr&& header
       callbacks_->requestInfo().setResponseFlag(RequestInfo::ResponseFlag::RateLimitServiceError);
     }
   } else if (!initiating_call_) {
+    if (headers_to_add_) {
+      Http::HeaderUtility::addHeaders(*request_headers_, *headers_to_add_);
+    }
+
     callbacks_->continueDecoding();
   }
 }
