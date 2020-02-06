@@ -12,7 +12,7 @@ EXTENSIONS = {
     # Clusters
     #
     "envoy.clusters.dynamic_forward_proxy":             "//source/extensions/clusters/dynamic_forward_proxy:cluster",
-    "envoy.clusters.redis":                             "//source/extensions/clusters/redis:redis_cluster",
+    #"envoy.clusters.redis":                             "//source/extensions/clusters/redis:redis_cluster",
 
     #
     # gRPC Credentials Plugins
@@ -25,7 +25,7 @@ EXTENSIONS = {
     # Health checkers
     #
 
-    "envoy.health_checkers.redis":                      "//source/extensions/health_checkers/redis:config",
+    #"envoy.health_checkers.redis":                      "//source/extensions/health_checkers/redis:config",
 
     #
     # HTTP filters
