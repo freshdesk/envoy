@@ -12,7 +12,7 @@ EXTENSIONS = {
     # Clusters
     #
     "envoy.clusters.dynamic_forward_proxy":             "//source/extensions/clusters/dynamic_forward_proxy:cluster",
-    "envoy.clusters.redis":                             "//source/extensions/clusters/redis:redis_cluster",
+    #"envoy.clusters.redis":                             "//source/extensions/clusters/redis:redis_cluster",
 
     #
     # gRPC Credentials Plugins
@@ -25,7 +25,7 @@ EXTENSIONS = {
     # Health checkers
     #
 
-    "envoy.health_checkers.redis":                      "//source/extensions/health_checkers/redis:config",
+    #"envoy.health_checkers.redis":                      "//source/extensions/health_checkers/redis:config",
 
     #
     # HTTP filters
@@ -87,7 +87,7 @@ EXTENSIONS = {
     "envoy.filters.network.mysql_proxy":                "//source/extensions/filters/network/mysql_proxy:config",
     "envoy.filters.network.ratelimit":                  "//source/extensions/filters/network/ratelimit:config",
     "envoy.filters.network.rbac":                       "//source/extensions/filters/network/rbac:config",
-    "envoy.filters.network.redis_proxy":                "//source/extensions/filters/network/redis_proxy:config",
+    #"envoy.filters.network.redis_proxy":                "//source/extensions/filters/network/redis_proxy:config",
     "envoy.filters.network.tcp_proxy":                  "//source/extensions/filters/network/tcp_proxy:config",
     "envoy.filters.network.thrift_proxy":               "//source/extensions/filters/network/thrift_proxy:config",
     "envoy.filters.network.sni_cluster":                "//source/extensions/filters/network/sni_cluster:config",
